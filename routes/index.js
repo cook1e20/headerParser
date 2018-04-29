@@ -4,10 +4,18 @@ var getIP = require('ipware')().get_ip;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
- 
- 
+ let response = {}
 
- res.json(getIP(req));
+
+ response.ipaddress = getIP(req);
+ response.language = #;
+ response.software = #;
+
+
+
+
+
+ res.json(response);
 
 
 
