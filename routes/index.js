@@ -9,7 +9,10 @@ router.get('/', function(req, res, next) {
  console.log("remote host: " + req.socket.remoteAddress);
  console.log("local host: " + req.socket.localAddress);
 
- res.json("hello");
+ res.json("remote host: " + req.connection.remoteAddress + "local host: " + req.connection.localAddress + "remote host: " + req.socket.remoteAddress + "local host: " + req.socket.localAddress)
+
+
+
 });
 
 
