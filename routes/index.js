@@ -1,15 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var getIP = require('ipware')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
  
- console.log("remote host: " + req.connection.remoteAddress);
- console.log("local host: " + req.connection.localAddress);
- console.log("remote host: " + req.socket.remoteAddress);
- console.log("local host: " + req.socket.localAddress);
+ 
 
- res.json("remote host: " + req.connection.remoteAddress + "local host: " + req.connection.localAddress + "remote host: " + req.socket.remoteAddress + "local host: " + req.socket.localAddress)
+ res.json(getIP(req));
 
 
 
